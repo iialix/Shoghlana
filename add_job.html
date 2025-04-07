@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/add_job.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Add Job</h1>
+        <form method="POST">
+            <input type="text" id="job_title" name="job_title" placeholder="job title" required>
+            <br>
+            <input type="number" id="ID" name="ID" placeholder="Job ID" required>
+            <br>
+            <input type="text" id="company_name" name="company_name" placeholder="company name" required>
+            <br>
+            <textarea id="job_description" name="job_description" placeholder="Job description" required></textarea>
+            <br>
+            <input type="number" id="salary" name="salary" placeholder="salary" required>
+            <br>
+            <input type="text" id="years_of_experience" name="years_of_experience" placeholder="years of experience" required>
+            <br>
+            <label for="toggleSwitch">Status:</label>
+            <br>
+            <label for="open">Open</label>
+            <input type="radio" id="open" name="status" value="open">
+            <br>
+            <label for="closed">Closed</label>
+            <input type="radio" id="closed" name="status" value="closed">
+            <br>
+            <div>
+            <button type="submit">Add Job</button>
+
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

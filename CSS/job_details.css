@@ -1,0 +1,71 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    height: 100vh; /* full height of the viewport */
+}
+
+/* Container is full width but centers its content */
+.container {
+    display: flex;
+    justify-content: center; /* centers the inner content horizontally */
+    align-items: center;     /* centers the inner content vertically (if there's enough height) */
+    min-height: 80vh;        /* optional: gives enough vertical space for centering effect */
+}
+/* Optional: style the job details block */
+.job_details {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+/* Optional: enhance hover effect */
+.job_details:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.job_details h1 {
+    font-size: 40px;
+}
+
+.job_details p {
+    font-size: 20px;
+}
+
+.job_details div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 20px;
+}
+.job_details .apply_button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    width: 25%;
+
+}
+
+.job_details .apply_button:hover {
+    background-color: #494949;
+    width: 100%;
+
+}
+
+.job_details .apply_button:active {
+    background-color: #bbbbbb;
+}
