@@ -76,7 +76,7 @@ body{
     cursor: pointer;
     color: #ffffff;
 
-    transition: 1s;
+    transition: 0.3s;
 }
 .login-part .Register-login{
     font-size: 16px;
