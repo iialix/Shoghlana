@@ -17,9 +17,12 @@ body{
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
     height: 100vh;
+}
+
+body > img{
+    transform: scale(0.8);
 }
 
 .container{

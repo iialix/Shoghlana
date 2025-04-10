@@ -9,18 +9,25 @@ body{
     background: rgb(38, 38, 38);
 }
 
-.container {
+.container1 {
     display: flex;
-    justify-content: center; /* centers the inner content horizontally */
-    align-items: flex-start; /* aligns the inner content to the top */
-    margin: 0 20% 0 20%;
+    justify-content: space-evenly; /* centers the inner content horizontally */
+    align-items: center; /* aligns the inner content to the top */
     height: 100%;
-}
-.container > div{
     width: 100%;
+}
+
+.container1 > img{
+    transform: scale(0.5);
+    opacity: 0.1;
+}
+
+.container1 .form-container{
+    width: 50%;
     padding: 40px;
     background-color: white;
     border-radius: 10px;
+    height: 90%;
 }
 form input 
 {
