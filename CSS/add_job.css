@@ -4,6 +4,11 @@ body{
     padding: 0;
 }
 
+*::selection {
+    color: white;
+    background: rgb(38, 38, 38);
+}
+
 .container {
     display: flex;
     justify-content: center; /* centers the inner content horizontally */
@@ -36,6 +41,17 @@ form textarea
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+}
+
+.radios
+{
+    display: flex;
+}
+
+input[type="radio"] {
+    accent-color: black;
+    width: 20px;
+    margin-right: 20px;
 }
 
 form #open

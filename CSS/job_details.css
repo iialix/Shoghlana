@@ -6,6 +6,11 @@ body {
     height: 100vh; /* full height of the viewport */
 }
 
+*::selection {
+    color: white;
+    background: rgb(38, 38, 38);
+}
+
 /* Container is full width but centers its content */
 .container {
     display: flex;
@@ -31,7 +36,7 @@ body {
 
 /* Optional: enhance hover effect */
 .container:hover {
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .job_details h1 {

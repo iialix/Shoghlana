@@ -4,6 +4,12 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  height: 100vh; /* full height of the viewport */
+}
+
+*::selection {
+  color: white;
+  background: rgb(38, 38, 38);
 }
 
 .navbar {
