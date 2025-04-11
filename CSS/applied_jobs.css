@@ -11,14 +11,27 @@ body{
 }
 
 
-.navbar {
+*::selection {
+    color: white;
+    background: rgb(38, 38, 38);
+  }
+  
+  .navbar {
     background-color: white;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+  }
+  
+  .navbar .logo{
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .navbar .logo:hover{
+    transform: scale(1.15);
+  }
   
   .nav-links a {
     margin: 0 15px;
@@ -42,14 +55,13 @@ body{
     transition: background-color 0.3s, color 0.3s;
   }
   
-  .sign:hover {
-    background-color: #828181;
-    color: #ffd700;
+  .nav-links .sign:hover {
+    background-color: #494949;
     text-decoration: none;
     cursor: pointer;
+    color: white;
   
   }
-
 
 
 
@@ -75,7 +87,7 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-
+    transition: all o.3s ease;
     flex: 1;
     max-width: 100%;
     position: relative;
@@ -93,6 +105,10 @@ body{
     
 }
 
+.jobs-container div h3{
+  transition: all 0.3s ease;
+
+}
 
 .applied-jobs-container {
     display: flex;
