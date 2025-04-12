@@ -16,9 +16,9 @@
             <form action="home.html" method="post">
                 <h1>Create Account</h1>
                 
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
                 <input type="password" placeholder="Confirm Password" required>
                 <input placeholder="Country" list="country" name="country" class="datalist-input" />
                     <datalist id="country">
@@ -263,11 +263,10 @@
                         <option value="Zimbabwe" />
                     </datalist>
                     <div class="radios">
-                        <input type="radio" name="color" value="red">
                         <label class="custom-label">
                             Admin
                         </label>
-                        <input type="radio" name="color" value="blue">
+                        <input type="radio" name="user-type" value="User" required>
                         <label class="custom-label">
                             User
                         </label>
@@ -279,8 +278,8 @@
             <form action="home.html" >
                 <h1>Sign In</h1>
                 
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
                 <div class="radios">
                     <input type="radio" name="user-type" value="Admin" required>
                     <label class="custom-label">
