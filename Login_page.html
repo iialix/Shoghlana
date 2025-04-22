@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LogIn_page_style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Text">
+        <h1>Welcome to,</h1>
+        <h1>Job search Website</h1>
+    </div>
+    <div class="login-part">
+        <form id="form" action="" method="post">
+            <h1>Login</h1>
+            <div class="input">
+                <input id="textusername" type="text" placeholder="Username" >
+                <div id="Errorusername"></div>
+            </div>
+            <div class="input">
+                <input id="textpassword" type="password" placeholder="Password" >
+                <div id="Errorpassword"></div>
+            </div>
+            <div class="RememberMe-login">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forget Password?</a>       
+            </div>
+            <button type="submit" class="btn">Sign in</button>
+            <div class="Register-login">
+                <p>Don`t have an accounr? <a href="RegisterPage.html">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="validation_login.js"></script>
+</body>
+</html>
