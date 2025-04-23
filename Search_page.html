@@ -24,8 +24,8 @@
 
   <div class="container">
     <div class="search-container">
-      <input type="text" class="search-input" placeholder="Search Jobs (e.g., Software Engineer)" />
-      <button class="search-button">Search</button>
+      <input type="text" id="search-input" placeholder="Search Jobs (e.g., Software Engineer)" />
+      <button id="search-button">Search</button>
     </div>
 
     <div class="filter-and-jobs">
@@ -34,70 +34,25 @@
         <div class="YoE-container">
           <label id="YoE">Years of Experience</label><br />
           <div class="inputs-yoe">
-            <input type="text" class="min-input" name="years_of_exp_min" placeholder="Min (e.g. 1)" />
-            <input type="text" class="max-input" name="years_of_exp_max" placeholder="Max (e.g. 5)" />
+            <input type="text" id="min-input" name="years_of_exp_min" placeholder="Min (e.g. 1)" />
+            <input type="text" id="max-input" name="years_of_exp_max" placeholder="Max (e.g. 5)" />
           </div>
         </div>
 
         <div class="type-container">
           <label id="job-type">Job Type</label><br />
           <div class="inputs-type">
-            <label><input type="checkbox" /> Full-time</label>
-            <label><input type="checkbox" /> Part-time</label>
+            <label><input type="radio" name="job-type" value="All" checked/> All</label>
+            <label><input type="radio" name="job-type" value="Full Time"/> Full Time</label>
+            <label><input type="radio" name="job-type" value="Part Time"/> Part time</label>
+            <label><input type="radio" name="job-type" value="Internship"/> Internship</label>
+            <label><input type="radio" name="job-type" value="Freelance"/> Freelance</label>
           </div>
         </div>
       </div>
 
       <div class="jobs-container">
-        <div class="job-card" data-url="job_details.html?title=Junior%20Software%20Engineer&company=Google&id=1&salary=7000&status=Open&experience=1&description=Google%20is%20looking%20for%20a%20passionate%20and%20motivated%20Software%20Engineer%20with%201%20year%20of%20professional%20experience%20to%20join%20our%20dynamic%20team.%20As%20a%20Software%20Engineer,%20you%20will%20work%20closely%20with%20world-class%20engineers%20and%20researchers.">
-          <h3>Junior Software Engineer</h3>
-          <p><b>Company: </b> Google</p>
-          <p><b>Years of Experience:</b> 1 Year(s)</p>
-          <p><b>Full Time</b></p><br>
-          <p><b>Description:</b> Google is looking for a passionate and motivated Software Engineer with 1 year of professional experience to join our dynamic team. As a Software Engineer, you will work closely with world-class engineers and researchers to design, build, and maintain scalable and efficient software systems that power Google's core products and services.</p>
-          <br />
-          <p><b>Status: </b>Open</p>
-        </div>
-
-        <div class="job-card" data-url="job_details.html?title=Front-end%20Developer&company=Facebook&id=2&salary=8500&status=Closed&experience=3&description=Facebook%20is%20seeking%20a%20talented%20Front-End%20Developer%20to%20craft%20intuitive%20and%20visually%20stunning%20user%20interfaces%20for%20our%20web%20applications.">
-          <h3>Front-end Developer</h3>
-          <p><b>Company: </b> Facebook</p>
-          <p><b>Years of Experience:</b> 3 Year(s)</p>
-          <p><b>Full Time</b></p><br>
-          <p><b>Description:</b> Facebook is seeking a talented Front-End Developer to craft intuitive and visually stunning user interfaces for our web applications. You’ll work closely with UX designers and backend engineers to bring designs to life and ensure top-notch user experience.</p>
-          <br />
-          <p><b>Status: </b>Closed</p>
-        </div>
-
-        <div class="job-card" data-url="job_details.html?title=Mobile%20App%20Developer&company=Vodafone&id=3&salary=9000&status=Open&experience=5&description=Join%20Vodafone%20as%20an%20Android%20Developer%20and%20help%20shape%20the%20future%20of%20mobile%20experiences.">
-          <h3>Mobile App Developer</h3>
-          <p><b>Company: </b> Vodafone</p>
-          <p><b>Years of Experience:</b> 5 Year(s)</p>
-          <p><b>Full Time</b></p><br>
-          <p><b>Description:</b> Join Vodafone as an Android Developer and help shape the future of mobile experiences. You will design and build advanced applications for the Android platform and collaborate with teams across Vodafone to deliver seamless mobile solutions.</p>
-          <br />
-          <p><b>Status: </b>Open</p>
-        </div>
-
-        <div class="job-card" data-url="job_details.html?title=Back-End%20Developer&company=Google&id=4&salary=9500&status=Open&experience=1&description=Google%20is%20hiring%20a%20Back-End%20Developer%20to%20help%20build%20and%20maintain%20the%20server-side%20components%20of%20our%20large-scale%20web%20applications.">
-          <h3>Back-End Developer</h3>
-          <p><b>Company: </b> Google</p>
-          <p><b>Years of Experience:</b> 1 Year(s)</p>
-          <p><b>Full Time</b></p><br>
-          <p><b>Description:</b> Google is hiring a Back-End Developer to help build and maintain the server-side components of our large-scale web applications. You'll work with databases, APIs, and cloud infrastructure to ensure fast and secure services.</p>
-          <br />
-          <p><b>Status: </b>Open</p>
-        </div>
-
-        <div class="job-card" data-url="job_details.html?title=QA%20Engineer&company=Google&id=5&salary=7500&status=Open&experience=1&description=Google%20is%20looking%20for%20a%20QA%20Engineer%20to%20ensure%20the%20delivery%20of%20high-quality%20software%20products.">
-          <h3>QA Engineer</h3>
-          <p><b>Company: </b> Google</p>
-          <p><b>Years of Experience:</b> 1 Year(s)</p>
-          <p><b>Full Time</b></p><br>
-          <p><b>Description:</b> Google is looking for a QA Engineer to ensure the delivery of high-quality software products. As a key player in the product lifecycle, you will write test plans, execute manual and automated tests, and identify bugs before release.</p>
-          <br />
-          <p><b>Status: </b>Open</p>
-        </div>
+        
       </div>
     </div>
   </div>
