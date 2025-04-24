@@ -1,0 +1,126 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    min-height: 100vh;
+    background:url(Career.jpg);
+    background-color: #485082;
+    background-repeat: no-repeat;
+    background-position: 100% 0px;
+}
+
+.signup-part{
+    width: 30%;
+    background-color: #485082;
+    color: #fff;
+    padding: 30px 40px;
+}
+.signup-part h1{
+    font-size: 36px;
+    text-align: center;
+    color: #C0DDEB
+}
+.signup-part .input{
+    width: 100%;
+    height: 40px;
+    margin: 40px 0px;
+}
+.input input{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    border: 0px solid aqua;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+.input input::placeholder{
+    color: #000000;
+}
+.signup-part .checkbox-signup{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.checkbox-signup label input{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+.checkbox-signup a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.signup-part .btn{
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 24px;
+}
+.signup-part .btn:hover{
+    width: 100%;
+    height: 45px;
+    background-color:#C0DDEB;
+    outline: none;
+    border: 3px solid rgb(211, 211, 211);
+    border-radius: 40px;
+    cursor: pointer;
+    color: #ffffff;
+
+    transition: 1s;
+}
+.login-part .Register-login{
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0px;
+}
+.login-part .Register-login p a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+.login-part .Register-login p a:hover{
+    color: black;
+}
+.Text{
+    font-size: x-large;
+    padding-bottom: 42%;
+}
+.signup-part .Tags{
+    padding-left: 20px;
+
+}
+.Text h1{
+    color: #485082;
+}
+.input-username{
+    margin-bottom: 10px;
+}
+#Erroruser{
+    color: red;
+    padding-left: 10px;
+}
+#Errorpassword{
+    color: red;
+    padding-left: 10px;
+}
+#Errorpasswordconfirm{
+    color: red;
+    padding-left: 10px;
+}
+#ErrorEmail{
+    color: red;
+    padding-left: 10px;
+}
