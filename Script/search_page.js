@@ -103,6 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let searchbar = document.getElementById('search-input');
     let minYears = document.getElementById('min-input');
     let maxYears = document.getElementById('max-input');
+    searchbar.value = sessionStorage.getItem('tempSearch');
+    searchjobs(searchbar.value, minYears.value, maxYears.value);
 
     function searchjobs(titleValue, minYearsValue, maxYearsValue){
       container.innerHTML = "";
@@ -147,6 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
         searchjobs(searchbar.value, minYears.value, maxYears.value);
       };
     });
+
+    
     
   });
   
