@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("form").addEventListener("submit", function (event) {
-      event.preventDefault(); // Stop form from submitting the traditional way
+      event.preventDefault(); 
   
       const job = {
         title: document.getElementById("job_title").value,
