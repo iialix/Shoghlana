@@ -1,58 +1,59 @@
-var errorusername=document.getElementById('Errorusername');
-var errorpassword=document.getElementById('Errorpassword');
-var textusername=document.getElementById('textusername');
-var textpassword=document.getElementById('textpassword');
-var form=document.getElementById('form');
-form.addEventListener('submit',function(event){
-    let erroruser=[];
-    let error2=[];
-    if(textusername==null||textusername.value==='')
-    {
-        erroruser.push("The username is requird");
-    }
-    let k=true;
-    let numbers=0;
-    for(let i=0;i<textpassword.value.length;i++)
-    {
-        if(textpassword.value[i]=='!'||textpassword.value[i]=='@'||textpassword.value[i]=='#'||textpassword.value[i]=='$'||textpassword.value[i]=='%'||textpassword.value[i]=='^'||textpassword.value[i]=='&'||textpassword.value[i]=='*'||textpassword.value[i]=='('||textpassword.value[i]==')'||textpassword.value[i]=='_')
-        {
-            k=false;
-        }
-        if(textpassword.value[i]>='0'&&textpassword.value[i]<="9")
-        {
-            numbers++;
-        }
-    }
-    if(textpassword==null||textpassword.value==='')
-    {
-        error2.push('The password is requird');
-    }
-    else if(textpassword.value.length<6)
-    {
-        error2.push('The length must greater than 6 letters');
-    }
-    else if(k==false&&numbers<3)
-    {
-        error2.push('The password must have special letter and have 3 numbers');
-    }
-    else if(k==true&&numbers>3)
-    {
-        error2.push('The password must have special letter');
-    }
-    else
-    {
-        error2.push('The password must have at least 3 numbers');
-    }
-    if(erroruser.length>0)
-    {
-        event.preventDefault();
-        errorusername.innerHTML=erroruser.join('<br>');
-    }
-    if(error2.length>0)
-    {
-        event.preventDefault();
-        errorpassword.innerHTML=error2.join('<br>');
-    }
-    event.preventDefault();
+// Signup Form Validation
+document.getElementById("signupForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  let errors = [];
 
-})
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("signupEmail").value.trim();
+  const password = document.getElementById("signupPassword").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+
+  // 1. Name validation
+  if (name.length < 3 || /[^a-zA-Z\s]/.test(name)) {
+    errors.push("Name must be at least 3 letters with no numbers or symbols.");
+  }
+
+  // 2. Email validation
+  if (!email.endsWith("@shoghlana.com")) {
+    errors.push("Email must end with @shoghlana.com");
+  }
+
+  // 3. Password validation
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+  if (!passwordRegex.test(password)) {
+    errors.push("Password must be at least 8 characters and contain upper, lower, number, and special char.");
+  }
+
+  // 4. Confirm password match
+  if (password !== confirmPassword) {
+    errors.push("Confirm password does not match.");
+  }
+
+  // Show errors
+  const errorBox = document.getElementById("signupErrors");
+  errorBox.innerHTML = errors.length ? errors.join("<br>") : "Signup successful!";
+});
+
+// Login Form Validation
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  let errors = [];
+
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value;
+
+  // Email validation
+  if (!email.endsWith("@shoghlana.com")) {
+    errors.push("Email must end with @shoghlana.com");
+  }
+
+  // Password validation
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+  if (!passwordRegex.test(password)) {
+    errors.push("Password is not valid.");
+  }
+
+  // Show errors
+  const errorBox = document.getElementById("loginErrors");
+  errorBox.innerHTML = errors.length ? errors.join("<br>") : "Login successful!";
+});
