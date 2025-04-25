@@ -19,8 +19,8 @@
       <a href="home.html">Home</a>
       <a href="Search_page.html">Browse Jobs</a>
       <a href="add_job.html">Post a Job</a>
-      <a href="profile.html" >Profile</a>
-      <a href="about.html" >About</a>
+      <a href="profile.html">Profile</a>
+      <a href="about.html">About</a>
       <a href="index.html" class="sign">Log out</a>
     </div>
   </nav>
@@ -28,17 +28,20 @@
   <main class="profile-container">
     <section class="profile-card">
       <img src="images/profile_picture.jpg" alt="User Avatar" class="avatar" />
-      <h2>Arthur Morgan</h2>
-      <p class="email">arthur.morgan@Shoghlana.com</p>
-      <p><strong>Location:</strong> San Francisco, CA</p>
-      <p><strong>Occupation:</strong> Software Engineer</p>
-      <p><strong>Skills:</strong> JavaScript, React, Python</p>
-      <p><strong>Experience:</strong> 5+ years in full-stack development</p>
-      <button class="buttons">Edit Profile</button>
+      <h2 id="profile-name">Arthur Morgan</h2>
+      <p class="email" id="profile-email">arthur.morgan@Shoghlana.com</p>
+      <p><strong>Location:</strong> <span id="profile-location">San Francisco, CA</span></p>
+      <p><strong>Occupation:</strong> <span id="profile-occupation">Software Engineer</span></p>
+      <p><strong>Skills:</strong> <span id="profile-skills">JavaScript, React, Python</span></p>
+      <p><strong>Experience (in years):</strong> <span id="profile-experience">5</span></p>
+      <button class="buttons" onclick="saveProfileData()"><a href="edit_profile.html">Edit Profile</a></button>
       <button class="buttons"><a href="posted_jobs.html">Posted Jobs</a></button>
       <button class="buttons"><a href="applied_jobs.html">Applied Jobs</a></button>
     </section>
   </main>
+
+  <script src="Script/profile.js"></script>
+
 </body>
 
 </html>
