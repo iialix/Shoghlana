@@ -93,20 +93,32 @@ body{
     position: relative;
     padding: 20px;
     margin-bottom: 20px;
+    min-width: 100%;
 }
+.jobs-container div h2{
+  transition: all 0.3s ease;
 
+}
 
 .jobs-container div:hover {
-    h3 {
-        font-size: 25px;
-        transition: 0.3s;
-    }
-    background-color: #F5F5F5;
-    
+  h2 {
+      font-size: 30px;
+      transition: 0.3s;
+  }
+  background-color: #e5e7eb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+  
 }
+
+
 
 .jobs-container div h3{
   transition: all 0.3s ease;
+
+}
+.jobs-container {
+  min-width: 100%;
 
 }
 
@@ -115,6 +127,7 @@ body{
     gap: 30px;
     max-width: 100%;
     margin-top: 20px;
+    min-width: 100%;
 }
 
 .jobs-container a {
@@ -133,5 +146,5 @@ body{
     background-color: #ddd;
     padding: 30px 20px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 20px; 
   }

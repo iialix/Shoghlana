@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderJobs() {
       jobsContainer.innerHTML = ""; 
       if (appliedJobs.length === 0) {
-          jobsContainer.innerHTML = "<p>You have not applied to any jobs yet.</p>";
+          jobsContainer.innerHTML = "<p>You have not applied to any jobs yet.</p>"; 
           return;
       }
 
