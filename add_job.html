@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,68 +11,71 @@
 
 
 </head>
+
 <body>
     <nav class="navbar">
         <a href="home.html" class="logo">
-          <img src="images/mini_logo.png" alt="Description" style="width:200px;">
+            <img src="images/mini_logo.png" alt="Description" style="width:200px;">
         </a>
         <div class="nav-links">
-          <a href="home.html">Home</a>
-          <a href="Search_page.html">Browse Jobs</a>
-          <a href="add_job.html">Post a Job</a>
-          <a href="profile.html" >Profile</a>
-          <a href="about.html" >About</a>
-          <a href="index.html" class="sign">Log out</a>
+            <a href="home.html">Home</a>
+            <a href="Search_page.html">Browse Jobs</a>
+            <a href="add_job.html" id="post_job">Post a Job</a>
+            <a href="profile.html">Profile</a>
+            <a href="about.html">About</a>
+            <a href="index.html" class="sign">Log out</a>
         </div>
-      </nav> 
+    </nav>
     <div class="container1">
         <img src="images/noBackground _miniLogo.png" alt="">
         <div class="form-container">
             <h1>Add Job</h1>
             <form method="POST">
                 <input type="text" id="job_title" name="job_title" placeholder="job title" required>
-            <br>
-            <input type="number" id="ID" name="ID" placeholder="Job ID" required>
-            <br>
-            <input type="text" id="company_name" name="company_name" placeholder="company name" required>
-            <br>
-            <textarea id="job_description" name="job_description" placeholder="Job description" required></textarea>
-            <br>
-            <input type="number" id="salary" name="salary" placeholder="salary" required>
-            <br>
-            <input type="text" id="years_of_experience" name="years_of_experience" placeholder="years of experience" required>
-            <br>
-            <input placeholder="job type" list="job type" name="job type" class="datalist-input" />
-            <datalist id="job type">
-                <option value="Full Time">
-                <option value="Part Time">
-                <option value="Internship">
-                <option value="Freelance">
-            </datalist>
-            <br>
-            <label for="toggleSwitch">Status:</label>
-            <br>
-            <div class="radios">
-                <label for="open">Open</label>
-                <input type="radio" id="open" name="status" value="open">
-                <label for="closed">Closed</label>
-                <input type="radio" id="closed" name="status" value="closed">
-            </div>
-            <br>
-            <div class="button-container">
-                <button type="submit">Add Job</button>
-            </div>
-        </form>
-    </div>
+                <br>
+                <input type="number" id="ID" name="ID" placeholder="Job ID" required>
+                <br>
+                <input type="text" id="company_name" name="company_name" placeholder="company name" required>
+                <br>
+                <textarea id="job_description" name="job_description" placeholder="Job description" required></textarea>
+                <br>
+                <input type="number" id="salary" name="salary" placeholder="salary" required>
+                <br>
+                <input type="text" id="years_of_experience" name="years_of_experience" placeholder="years of experience"
+                    required>
+                <br>
+                <input placeholder="job type" list="job type" name="job type" class="datalist-input" />
+                <datalist id="job type">
+                    <option value="Full Time">
+                    <option value="Part Time">
+                    <option value="Internship">
+                    <option value="Freelance">
+                </datalist>
+                <br>
+                <label for="toggleSwitch">Status:</label>
+                <br>
+                <div class="radios">
+                    <label for="open">Open</label>
+                    <input type="radio" id="open" name="status" value="open">
+                    <label for="closed">Closed</label>
+                    <input type="radio" id="closed" name="status" value="closed">
+                </div>
+                <br>
+                <div class="button-container">
+                    <button type="submit">Add Job</button>
+                </div>
+            </form>
+        </div>
         <img src="images/noBackground _miniLogo.png" alt="">
     </div>
     <section class="footer">
         <h3>Contact Us</h3>
         <p>Email: contact@Shoghlana.com | Phone: xxx xxxx xxx</p>
         <p>Address: xxxxxxxx, Egypt</p>
-      </section>
-      <script src="Script/add_job.js"></script>
+    </section>
+    <script src="Script/add_job.js"></script>
+    <script src="Script/user_nav_bar.js"></script>
 
-      
 </body>
+
 </html>

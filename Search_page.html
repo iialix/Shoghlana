@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="CSS/Search_page.css" />
   <link rel="icon" href="images/tabLogo.png" type="image/png" sizes="128x128" />
 </head>
+
 <body>
   <nav class="navbar">
     <a href="home.html" class="logo">
@@ -15,7 +17,7 @@
     <div class="nav-links">
       <a href="home.html">Home</a>
       <a href="Search_page.html">Browse Jobs</a>
-      <a href="add_job.html">Post a Job</a>
+      <a href="add_job.html" id="post_job">Post a Job</a>
       <a href="profile.html">Profile</a>
       <a href="about.html">About</a>
       <a href="index.html" class="sign">Log out</a>
@@ -42,17 +44,17 @@
         <div class="type-container">
           <label id="job-type">Job Type</label><br />
           <div class="inputs-type">
-            <label><input type="radio" name="job-type" value="All" checked/> All</label>
-            <label><input type="radio" name="job-type" value="Full Time"/> Full Time</label>
-            <label><input type="radio" name="job-type" value="Part Time"/> Part time</label>
-            <label><input type="radio" name="job-type" value="Internship"/> Internship</label>
-            <label><input type="radio" name="job-type" value="Freelance"/> Freelance</label>
+            <label><input type="radio" name="job-type" value="All" checked /> All</label>
+            <label><input type="radio" name="job-type" value="Full Time" /> Full Time</label>
+            <label><input type="radio" name="job-type" value="Part Time" /> Part time</label>
+            <label><input type="radio" name="job-type" value="Internship" /> Internship</label>
+            <label><input type="radio" name="job-type" value="Freelance" /> Freelance</label>
           </div>
         </div>
       </div>
 
       <div class="jobs-container">
-        
+
       </div>
     </div>
   </div>
@@ -64,7 +66,8 @@
   </section>
 
   <script src="Script/search_page.js"></script>
+  <script src="Script/user_nav_bar.js"></script>
 
-  
 </body>
+
 </html>
