@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let appliedJobs = JSON.parse(localStorage.getItem("appliedJobs")) || [];
 
   function renderJobs() {
-      jobsContainer.innerHTML = ""; // Clear any existing jobs first
-
+      jobsContainer.innerHTML = ""; 
       if (appliedJobs.length === 0) {
           jobsContainer.innerHTML = "<p>You have not applied to any jobs yet.</p>";
           return;
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       appliedJobs.forEach(job => {
           const jobElement = document.createElement("div");
-          jobElement.classList.add("job-card"); // You can style this class in your CSS
+          jobElement.classList.add("job-card"); 
 
           jobElement.innerHTML = `
               <h2>${job.title}</h2>

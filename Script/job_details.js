@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
   if (statusElement && applyButton) {
       const statusText = statusElement.textContent.toLowerCase();
 
-      // Check if the status contains "closed"
+      
       if (statusText.includes("closed")) {
           applyButton.style.display = "none";
       }
 
-      // Handle Apply button click
+      
       applyButton.addEventListener("click", function () {
           const job = {
               title: document.querySelector(".job_title").textContent,
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.setItem("appliedJobs", JSON.stringify(appliedJobs));
 
           alert("Job applied successfully!");
-          window.location.href = "applied_jobs.html"; // Redirect after applying
+          window.location.href = "applied_jobs.html"; 
       });
   }
 });
