@@ -4,13 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
       return urlParams.get(param);
   }
 
-  document.querySelector(".job_title").textContent = getQueryParam("title") || "Job Title";
-  document.querySelector(".company_name").textContent = getQueryParam("company") || "Company Name";
-  document.querySelector(".job_id").textContent = "ID: " + (getQueryParam("id") || "N/A");
-  document.querySelector(".salary").textContent = "Salary: " + (getQueryParam("salary") || "0000") + "$";
-  document.querySelector(".job_status").textContent = "Status: " + (getQueryParam("status") || "Unknown");
-  document.querySelector(".job_experience").textContent = "Experience required: " + (getQueryParam("experience") || "0") + " Year(s)";
-  document.querySelector(".job_description").textContent = "Job Description: " + (getQueryParam("description") || "No description provided.");
+  
+  const jobTitle = getQueryParam("title") || "Job Title";
+  const companyName = getQueryParam("company") || "Company Name";
+  const jobId = getQueryParam("id") || "N/A";
+  const salary = getQueryParam("salary") || "0000";
+  const status = getQueryParam("status") || "Unknown";
+  const experience = getQueryParam("experience") || "0";
+  const description = getQueryParam("description") || "No description provided.";
+
+  document.querySelector(".job_title").textContent = jobTitle;
+  document.querySelector(".company_name").textContent = companyName;
+  document.querySelector(".job_id").textContent = "ID: " + jobId;
+  document.querySelector(".salary").textContent = "Salary: " + salary + "$";
+  document.querySelector(".job_status").textContent = "Status: " + status;
+  document.querySelector(".job_experience").textContent = "Experience required: " + experience + " Year(s)";
+  document.querySelector(".job_description").textContent = "Job Description: " + description;
 
   const statusElement = document.querySelector(".job_status");
   const applyButton = document.querySelector(".apply_button");
@@ -24,21 +33,28 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       
+      const appliedJobs = JSON.parse(localStorage.getItem("appliedJobs")) || [];
+      const alreadyApplied = appliedJobs.some(job => job.title === jobTitle && job.company === companyName);
+
+      if (alreadyApplied) {
+          applyButton.style.display = "none"; 
+      }
+
+      
       applyButton.addEventListener("click", function () {
-          const job = {
-              title: document.querySelector(".job_title").textContent,
-              company: document.querySelector(".company_name").textContent,
-              salary: document.querySelector(".salary").textContent.replace("Salary: ", "").replace("$", ""),
-              experience: document.querySelector(".job_experience").textContent.replace("Experience required: ", "").replace(" Year(s)", ""),
-              status: document.querySelector(".job_status").textContent.replace("Status: ", ""),
-              description: document.querySelector(".job_description").textContent.replace("Job Description: ", ""),
+          const newJob = {
+              title: jobTitle,
+              company: companyName,
+              salary: salary,
+              experience: experience,
+              status: status,
+              description: description,
           };
 
-          let appliedJobs = JSON.parse(localStorage.getItem("appliedJobs")) || [];
-          appliedJobs.push(job);
+          appliedJobs.push(newJob);
           localStorage.setItem("appliedJobs", JSON.stringify(appliedJobs));
 
-          alert("Job applied successfully!");
+          applyButton.style.display = "none"; 
           window.location.href = "applied_jobs.html"; 
       });
   }
