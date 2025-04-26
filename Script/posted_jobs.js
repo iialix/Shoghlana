@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".company-view");
 
-    const jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+    const jobs = JSON.parse(localStorage.getItem("posted_jobs")) || [];
 
     jobs.forEach((job) => {
       const jobCard = document.createElement("div");
